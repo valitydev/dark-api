@@ -8,9 +8,7 @@ import dev.vality.damsel.payment_processing.PartyManagementSrv;
 import dev.vality.damsel.questionary_proxy_aggr.QuestionaryAggrProxyHandlerSrv;
 import dev.vality.dark.api.config.property.ConversationProperties;
 import dev.vality.dark.api.config.property.QuestionaryAggrProxyProperties;
-import dev.vality.dark.api.config.property.QuestionaryProperties;
 import dev.vality.file.storage.FileStorageSrv;
-import dev.vality.questionary.manage.QuestionaryManagerSrv;
 import dev.vality.woody.thrift.impl.http.THSpawnClientBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,16 +40,6 @@ public class ClientConfig {
                 .setConnectTimeout(Duration.of(connectTimeoutSec, ChronoUnit.SECONDS))
                 .setReadTimeout(Duration.of(readTimeoutSec, ChronoUnit.SECONDS))
                 .build();
-    }
-
-    @Bean
-    public DarkMessiahStatisticsSrv.Iface magistaClient(@Value("${magista.client.adapter.url}") Resource resource,
-                                                        @Value("${magista.client.adapter.networkTimeout}") int timeout)
-            throws IOException {
-        return new THSpawnClientBuilder()
-                .withAddress(resource.getURI())
-                .withNetworkTimeout(timeout)
-                .build(DarkMessiahStatisticsSrv.Iface.class);
     }
 
     @Bean
@@ -92,34 +80,6 @@ public class ClientConfig {
                 .withNetworkTimeout(questionaryAggrProxyProperties.getNetworkTimeout())
                 .build(QuestionaryAggrProxyHandlerSrv.Iface.class);
 
-    }
-
-    @Bean
-    public QuestionaryManagerSrv.Iface questionaryManagerClient(QuestionaryProperties questionaryProperties)
-            throws IOException {
-        return new THSpawnClientBuilder()
-                .withAddress(questionaryProperties.getUrl().getURI())
-                .withNetworkTimeout(questionaryProperties.getNetworkTimeout())
-                .build(QuestionaryManagerSrv.Iface.class);
-    }
-
-
-    @Bean
-    public RepositoryClientSrv.Iface dominantClient(@Value("${dominant.url}") Resource resource,
-                                                    @Value("${dominant.networkTimeout}") int networkTimeout)
-            throws IOException {
-        return new THSpawnClientBuilder()
-                .withNetworkTimeout(networkTimeout)
-                .withAddress(resource.getURI()).build(RepositoryClientSrv.Iface.class);
-    }
-
-    @Bean
-    public MessageSenderSrv.Iface messageSenderClient(@Value("${dudoser.url}") Resource resource,
-                                                      @Value("${dudoser.networkTimeout}") int networkTimeout)
-            throws IOException {
-        return new THSpawnClientBuilder()
-                .withNetworkTimeout(networkTimeout)
-                .withAddress(resource.getURI()).build(MessageSenderSrv.Iface.class);
     }
 
 }
