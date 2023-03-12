@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>dark-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>dark-api</name>
@@ -21,7 +21,7 @@
         <management.port>8023</management.port>
         <exposed.ports>${server.port} ${management.port}</exposed.ports>
         <mapstruct.processor.version>1.3.0.Final</mapstruct.processor.version>
-        <resteasy.versions>4.5.8.Final</resteasy.versions>
+        <resteasy.versions>4.6.0.Final</resteasy.versions>
     </properties>
 
     <dependencies>
