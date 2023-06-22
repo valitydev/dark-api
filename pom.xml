@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>dark-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>dark-api</name>
@@ -183,7 +183,7 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.1.6.Final</version>
+            <version>8.0.1.Final</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
