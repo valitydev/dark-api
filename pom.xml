@@ -6,11 +6,11 @@
     <parent>
         <groupId>dev.vality</groupId>
         <artifactId>service-parent-pom</artifactId>
-        <version>1.0.12</version>
+        <version>1.0.20</version>
     </parent>
 
     <artifactId>dark-api</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>dark-api</name>
@@ -21,7 +21,7 @@
         <management.port>8023</management.port>
         <exposed.ports>${server.port} ${management.port}</exposed.ports>
         <mapstruct.processor.version>1.3.0.Final</mapstruct.processor.version>
-        <resteasy.versions>4.5.8.Final</resteasy.versions>
+        <resteasy.versions>4.5.8.Fin4.7.9.Final</resteasy.versions>
     </properties>
 
     <dependencies>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>dev.vality.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>1.0.4</version>
+            <version>1.0.4</ve1.0.5
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
@@ -46,22 +46,22 @@
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.551-df1c52f</version>
+            <version>1.551-df11.606-f718741</version>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>mamsel</artifactId>
-            <version>0.2.1</version>
+            <version>0.2.1</ve0.2.2
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>messages-proto</artifactId>
-            <version>1.19-cfc341d</version>
+            <version>1.19-cfc31.21-f2ee49b</version>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>file-storage-proto</artifactId>
-            <version>1.33-86bcf44</version>
+            <version>1.33-86bc1.45-321e0e8</version>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>swag-claim-management</artifactId>
-            <version>1.1-18ebff9-server</version>
+            <version>1.1-18ebf1.46-2c84fce-server</version>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
@@ -81,12 +81,12 @@
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>swag-questionary-aggr</artifactId>
-            <version>1.31-1dca351-server</version>
+            <version>1.31-1dca1.35-ed41741-server</version>
         </dependency>
         <dependency>
             <groupId>dev.vality</groupId>
             <artifactId>swag-messages</artifactId>
-            <version>1.2-a4c2ada-server</version>
+            <version>1.2-a4c2a1.3-03e1014-server</version>
         </dependency>
 
         <!--spring-->
@@ -97,10 +97,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-admin-client</artifactId>
-            <version>17.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jboss.resteasy</groupId>
+            <version>17.0.0</v17.0.1</groupId>
                     <artifactId>resteasy-client</artifactId>
                 </exclusion>
                 <exclusion>
@@ -120,10 +117,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-spring-security-adapter</artifactId>
-            <version>17.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bouncycastle</groupId>
+            <version>17.0.0</v17.0.1</groupId>
                     <artifactId>bcprov-jdk15on</artifactId>
                 </exclusion>
             </exclusions>
@@ -131,8 +125,7 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-            <scope>test</scope>
+            <version>0.9.1</ve0.12.2</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -173,7 +166,7 @@
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
-            <version>2.8.1</version>
+            <version>2.8.1</ve2.9.3
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
@@ -183,7 +176,7 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.1.6.Final</version>
+            <version>6.1.6.Fin6.2.5.Final</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
@@ -208,12 +201,12 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
+            <version>3.8.1</ve3.13.0
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.68</version>
+            <version>1.68</ver1.70
         </dependency>
 
         <!--test-->
@@ -225,14 +218,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-contract-wiremock</artifactId>
-            <version>2.2.4.RELEASE</version>
+            <version>2.2.4.REL2.2.6.RELEASE</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.github.benas</groupId>
             <artifactId>random-beans</artifactId>
-            <version>3.6.0</version>
-            <scope>test</scope>
+            <version>3.6.0</ve3.9.0</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -267,7 +259,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-remote-resources-plugin</artifactId>
-                <version>1.6.0</version>
+                <version>1.7.0</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.shared</groupId>
